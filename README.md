@@ -1,5 +1,9 @@
 # CamStream
 
+[![Build](https://github.com/NoobFullStack/camstream/actions/workflows/build.yml/badge.svg)](https://github.com/NoobFullStack/camstream/actions/workflows/build.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+![minSdk 26](https://img.shields.io/badge/minSdk-26-brightgreen.svg)
+
 An ad-free, open-source Android app that streams your phone's camera to your computer
 as a webcam: a from-scratch replacement for the closed-source, ad-supported DroidCam
 app that plugs straight into the existing open-source
@@ -11,6 +15,11 @@ independently recovered by reading `droidcam-linux-client`'s own GPL-2.0 source
 (published specifically so people can build interoperable clients) and reimplemented
 from scratch here. See [`PROTOCOL.md`](PROTOCOL.md) for the full wire-format writeup
 and provenance notes.
+
+<p align="center">
+  <img src="docs/screenshots/stopped.png" width="260" alt="Stopped state" />
+  <img src="docs/screenshots/streaming.png" width="260" alt="Streaming state" />
+</p>
 
 ## Features
 
@@ -60,7 +69,9 @@ Output: `app/build/outputs/apk/debug/app-debug.apk`.
 
 ## Run
 
-1. `adb install -r app/build/outputs/apk/debug/app-debug.apk`
+1. Install the APK: grab the latest one from
+   [Releases](https://github.com/NoobFullStack/camstream/releases), or use your own
+   build with `adb install -r app/build/outputs/apk/debug/app-debug.apk`.
 2. Launch the app, grant the camera (and, on Android 13+, notification) permission,
    tap **Start**. The screen shows the phone's LAN IP and port `4747`.
 3. On the computer:

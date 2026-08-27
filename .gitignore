@@ -13,3 +13,6 @@ build/
 
 # Personal notes, not for publication
 /.private/
+
+# Release signing (keystore itself lives in .private/, never commit either)
+/keystore.properties
