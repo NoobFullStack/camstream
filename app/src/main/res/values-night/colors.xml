@@ -1,0 +1,14 @@
+<resources>
+    <color name="background">#101014</color>
+    <color name="surface">#1C1C22</color>
+    <color name="on_surface">#ECECF1</color>
+    <color name="on_surface_variant">#9AA0AC</color>
+    <color name="outline">#2A2A33</color>
+
+    <color name="brand_primary">#7C6FFF</color>
+    <color name="on_primary">#14121F</color>
+
+    <color name="status_active">#3DDC97</color>
+    <color name="status_idle">#6B6F76</color>
+    <color name="stop_action">#FF6B6E</color>
+</resources>

@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">CamStream</string>
+    <string name="address_format">%1$s : %2$d</string>
+    <string name="address_unknown">No network connection</string>
+    <string name="address_hint">Tap to copy · enter this in the PC client</string>
+    <string name="address_copied">Address copied</string>
+    <string name="status_running">Streaming</string>
+    <string name="status_stopped">Stopped</string>
+    <string name="status_permission_denied">Camera permission needed</string>
+    <string name="action_start">Start</string>
+    <string name="action_stop">Stop</string>
+    <string name="action_switch_to_front">Front camera</string>
+    <string name="action_switch_to_back">Back camera</string>
+    <string name="notification_title">CamStream is running</string>
+    <string name="notification_text">Streaming camera to the network. Tap Stop in the app to end.</string>
+    <string name="notification_channel_name">Webcam streaming</string>
+</resources>

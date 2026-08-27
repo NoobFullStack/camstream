@@ -1,0 +1,15 @@
+*.iml
+.gradle/
+/local.properties
+.idea/
+.DS_Store
+build/
+/captures
+.cxx/
+/app/build/
+/app/release/
+*.apk
+*.aab
+
+# Personal notes, not for publication
+/.private/
