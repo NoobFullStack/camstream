@@ -1,0 +1,25 @@
+CamStream streams your Android phone's camera to your computer as a webcam, over the
+same TCP protocol used by the official DroidCam app. It is a from-scratch, ad-free,
+open-source replacement for that app's phone side, and works unmodified with the
+existing open-source droidcam-linux-client and v4l2loopback-dc pipeline already
+available on the desktop.
+
+No DroidCam code is included; the wire protocol was independently recovered by reading
+droidcam-linux-client's own GPL-2.0 source, published specifically so people can build
+interoperable clients. See PROTOCOL.md in the source repository for the full writeup.
+
+Features:
+
+* CameraX-based capture, JPEG-encoded, streamed over the DroidCam-compatible TCP
+  protocol on port 4747
+* Foreground service that keeps streaming while the screen is off or the app is
+  backgrounded
+* Front/back camera switching mid-stream, without dropping the PC connection
+* Minimal, modern UI: connection status, the address to enter on the PC side, and
+  start/stop/switch controls. Deliberately no camera preview in the UI itself, since
+  rendering one would cost battery for no benefit
+* Works with any client that speaks the protocol, including droidcam-linux-client and
+  the resulting v4l2loopback device in any video call app
+
+Requires a computer running droidcam-linux-client and its v4l2loopback-dc kernel
+module; both devices must be on the same local network.
