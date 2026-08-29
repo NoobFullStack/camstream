@@ -47,6 +47,13 @@ android {
 
     buildTypes {
         release {
+            // The real cause of the F-Droid reproducible-build mismatch: AGP embeds a
+            // real META-INF/version-control-info.textproto file recording git state,
+            // which differs depending on whether/how git is available in the build
+            // environment (this is separate from, and not fixed by, dependenciesInfo
+            // above). Disabling it removes that environment-dependent byte.
+            vcsInfo.include = false
+
             isMinifyEnabled = false
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
