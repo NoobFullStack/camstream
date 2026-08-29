@@ -18,12 +18,20 @@ android {
     namespace = "dev.camstream.app"
     compileSdk = 34
 
+    // Disabled for F-Droid reproducible builds: this block embeds an encrypted,
+    // git-derived VCS fingerprint that differs between build environments (e.g.
+    // whether git is available), which breaks byte-for-byte APK reproducibility.
+    dependenciesInfo {
+        includeInApk = false
+        includeInBundle = false
+    }
+
     defaultConfig {
         applicationId = "dev.camstream.app"
         minSdk = 26
         targetSdk = 34
-        versionCode = 1
-        versionName = "0.1.0"
+        versionCode = 2
+        versionName = "0.1.1"
     }
 
     signingConfigs {
